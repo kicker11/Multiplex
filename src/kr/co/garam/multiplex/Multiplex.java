@@ -12,14 +12,14 @@ public class Multiplex {
 		int j = 1 ;
 		int Rst = 0;
 
-		System.out.println("구구단을 출력하시겠습니까. ? [y/n]") ;
+		System.out.println("전체 구구단을 출력하시겠습니까. ? [y/n]") ;
+        
 		
-		Scanner MyInput = new Scanner(System.in) ;
-		
-		String Ans = MyInput.next() ;
+		Scanner MyInputStr = new Scanner(System.in) ;
+		String YN = MyInputStr.next() ;
 			
 		
-		if ( ("y").equals(Ans)) {
+		if ( ("y").equals(YN)) {
 			for (i = 2; i < 10; i++) {
 				for (j = 1; j < 10; j++) {
 					Rst = i * j ;
@@ -28,8 +28,28 @@ public class Multiplex {
 				System.out.println("\n");
 			}
 		} else {
-			System.out.println("취소되었습니다.") ;
+			System.out.println("몇 단을 출력하시겠습니까? : ");
+			Scanner MyInputInt = new Scanner(System.in) ;
+			int AnsInt = MyInputInt.nextInt() ;
+
+			System.out.println(String.format("%s  %s  %d %s", "Using while loop Result", " : " , AnsInt, "단"));	
+			while ( j < 10 ) {
+				Rst = AnsInt * j ;
+				System.out.println(String.format("%2d %s %2d %s %3d", AnsInt, "*", j, "=", Rst)) ;
+				j = j + 1;
+			}
+			
+
+			System.out.println(String.format("%s  %s  %d %s", "Using for loop Result", " : " , AnsInt, "단"));
+			for ( j= 1; j < 10; j++) {
+				Rst = AnsInt * j ;
+				System.out.println(String.format("%2d %s %2d %s %3d", AnsInt, "*", j, "=", Rst)) ;
+			}
+			
+			
 		}
+
+	
 	}
 
 }
