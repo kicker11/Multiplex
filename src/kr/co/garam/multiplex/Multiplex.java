@@ -32,20 +32,26 @@ public class Multiplex {
 			Scanner MyInputInt = new Scanner(System.in) ;
 			int AnsInt = MyInputInt.nextInt() ;
 
-			System.out.println(String.format("%s  %s  %d %s", "Using while loop Result", " : " , AnsInt, "단"));	
-			while ( j < 10 ) {
-				Rst = AnsInt * j ;
-				System.out.println(String.format("%2d %s %2d %s %3d", AnsInt, "*", j, "=", Rst)) ;
-				j = j + 1;
-			}
 			
-
-			System.out.println(String.format("%s  %s  %d %s", "Using for loop Result", " : " , AnsInt, "단"));
-			for ( j= 1; j < 10; j++) {
-				Rst = AnsInt * j ;
-				System.out.println(String.format("%2d %s %2d %s %3d", AnsInt, "*", j, "=", Rst)) ;
-			}
+			if ( AnsInt > 0 ) {  
 			
+				System.out.println(String.format("%s  %s  %d %s", "Using while loop Result", " : " , AnsInt, "단"));	
+				while ( j < 10 ) {
+					Rst = AnsInt * j ;
+					System.out.println(String.format("%2d %s %2d %s %3d", AnsInt, "*", j, "=", Rst)) ;
+					j = j + 1;
+				}
+				
+	
+				System.out.println(String.format("%s  %s  %d %s", "Using for loop Result", " : " , AnsInt, "단"));
+				for ( j= 1; j < 10; j++) {
+					Rst = AnsInt * j ;
+					System.out.println(String.format("%2d %s %2d %s %3d", AnsInt, "*", j, "=", Rst)) ;
+				}
+			} else {
+				System.out.println("잘못된 단을 입력하셨습니다. 입력값 = " + AnsInt);
+			}
+				
 			
 		}
 
