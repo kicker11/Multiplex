@@ -9,17 +9,22 @@ public class Multiplex {
         // 구구단을 출력하는 테스트
 	
 		int i, j ;
-		int Result[] = new int[9] ;
-	
-		for ( i=2; i < 10; i++) {
-			for ( j=1; j < (Result.length + 1); j++) {
-				Result[j-1] = i * j ;
-				System.out.println( i + " * " + j +  " = " + Result[j-1] ) ;
-			}
-			System.out.println("\n");
-		}
-
-	
+		int[] Result = new int[9] ;
+		
+        OutputCalcGugu(Result) ;
+		
 	}
+	
+
+public static void OutputCalcGugu(int[] Result) {
+	for ( int i=2; i < 10; i++) {
+		for ( int j=1; j < (Result.length + 1); j++) {
+			//Result[j-1] = i * j ;
+			System.out.println( i + " * " + j +  " = " + Result[j-1] ) ;
+		}
+		System.out.println("\n");
+	}
+}
+
 
 }
