@@ -4,27 +4,22 @@ import java.util.Scanner;
 
 public class Multiplex {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-        // 구구단을 출력하는 테스트
+
 	
-		int i, j ;
+	public static int[] Calc(int times) {
 		int[] Result = new int[9] ;
-		
-        OutputCalcGugu(Result) ;
-		
+	    for ( int i=0; i < Result.length; i++) {
+	    	Result[i] = times * (i+1) ;
+	    }
+		return Result ;
 	}
 	
-
-public static void OutputCalcGugu(int[] Result) {
-	for ( int i=2; i < 10; i++) {
-		for ( int j=1; j < (Result.length + 1); j++) {
-			//Result[j-1] = i * j ;
-			System.out.println( i + " * " + j +  " = " + Result[j-1] ) ;
+	public static void print(int[] Result) {
+		for(int i = 0; i < Result.length; i++) {
+			System.out.println(Result[i]);
 		}
 		System.out.println("\n");
 	}
-}
-
+	
 
 }
