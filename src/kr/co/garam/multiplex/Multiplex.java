@@ -1,15 +1,13 @@
 package kr.co.garam.multiplex;
 
-import java.util.Scanner;
-
 public class Multiplex {
 
 
 	
-	public static int[] Calc(int times) {
-		int[] Result = new int[9] ;
+	public static int[] Calc(int ftimes, int stimes) {
+		int[] Result = new int[stimes] ;
 	    for ( int i=0; i < Result.length; i++) {
-	    	Result[i] = times * (i+1) ;
+	    	Result[i] = ftimes * (i+1) ;
 	    }
 		return Result ;
 	}
